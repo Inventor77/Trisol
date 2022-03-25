@@ -1,0 +1,30 @@
+@mixin center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.signup_layout {
+	@include center;
+	background: url("../../assets/images/pattern-background.jpg") center/100vw
+		auto no-repeat;
+	min-height: 100vh;
+	min-width: 100vw;
+
+	.signup_container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 960px;
+		height: 564px;
+		border-radius: 16px;
+
+		.signup_container_left {
+			padding: 32px 45px 42px 16px;
+			width: 475px;
+			height: 560px;
+			background: #161616;
+			border-radius: 16px 0px 0px 16px;
+		}
+	}
+}
