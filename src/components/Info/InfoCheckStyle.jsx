@@ -1,5 +1,6 @@
 import React from 'react'
 import Check from "../../assets/svgs/check.svg"
+import './Info.scss';
 
 const LIST_CONTENT = [
     "Medical Records Register",

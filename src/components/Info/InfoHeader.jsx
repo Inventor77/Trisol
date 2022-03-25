@@ -1,4 +1,6 @@
 import React from 'react'
+import './Info.scss';
+
 
 function InfoHeader() {
     return (

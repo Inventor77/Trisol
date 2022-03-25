@@ -1,7 +1,9 @@
 import React from 'react'
 import './Signup.scss'
 import Logo from '../../assets/svgs/logo.svg'
-import InfoContainer from '../../components/Info/InfoContainer'
+import InfoHeader from '../../components/Info/InfoHeader'
+import InfoPara from '../../components/Info/InfoPara'
+import InfoCheckStyle from '../../components/Info/InfoCheckStyle'
 
 function Signup() {
     return (
@@ -11,7 +13,9 @@ function Signup() {
                     <div className='signup_container_logo'>
                         <img src={Logo} alt='trisol-logo'></img>
                     </div>
-                    <InfoContainer />
+                    <InfoHeader />
+                    <InfoPara />
+                    <InfoCheckStyle />
                 </div>
             </div>
         </div>
