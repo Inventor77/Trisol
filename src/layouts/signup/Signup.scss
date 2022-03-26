@@ -3,6 +3,7 @@
 	align-items: center;
 	justify-content: center;
 }
+$font-stack: "Roboto", serif;
 
 .signup_layout {
 	@include center;
@@ -17,6 +18,8 @@
 		justify-content: space-between;
 		width: 960px;
 		height: 564px;
+		background: #262626;
+		box-shadow: 16px 24px 36px -15px rgba(238, 238, 238, 0.25);
 		border-radius: 16px;
 
 		.signup_container_left {
@@ -25,6 +28,77 @@
 			height: 560px;
 			background: #161616;
 			border-radius: 16px 0px 0px 16px;
+		}
+
+		.signup_container_right {
+			padding: 32px 0px 42px 48px;
+			width: calc(100% - 475px);
+			height: 100%;
+			.signup_container_right_title {
+				margin-bottom: 8px;
+				.title_text {
+					font-family: $font-stack;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 24px;
+					line-height: 22px;
+					color: #ffffff;
+				}
+			}
+			.signup_container_right_para {
+				margin-bottom: 42px;
+				.para_text {
+					font-family: $font-stack;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 17px;
+					color: #666666;
+				}
+			}
+			.form_label {
+				margin: 16px 0px 8px 0px;
+				font-family: $font-stack;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 21px;
+				color: #ffffff;
+			}
+
+			.password_container {
+				position: relative;
+				.password_eye {
+					position: absolute;
+					right: 20px;
+					bottom: 4px;
+				}
+			}
+
+			.signup_container_right_footer {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 12px;
+				margin-top: 24px;
+				.footer_text {
+					font-family: $font-stack;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 15px;
+					line-height: 18px;
+					color: #ffffff;
+				}
+				.footer_link {
+					font-family: $font-stack;
+					font-style: normal;
+					font-weight: 700;
+					font-size: 15px;
+					line-height: 18px;
+					text-decoration-line: underline;
+					color: #8afcfc;
+				}
+			}
 		}
 	}
 }
