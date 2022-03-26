@@ -17,7 +17,7 @@ function InfoCheckStyle() {
                 <h3 className='infoCheckStyle_header_text'>
                     What you can do with Trisol
                 </h3>
-                {LIST_CONTENT.map((text) => <InfoCheckStyleItem text={text} />)}
+                {LIST_CONTENT.map((text) => <InfoCheckStyleItem key={text} text={text} />)}
             </div>
         </div>
     )
@@ -28,7 +28,7 @@ function InfoCheckStyleItem(props) {
     return (
         <div className='infoCheckStyleItem'>
             <div className='infoCheckStyleItem_check_logo'>
-                <img src={Check}  alt='check'></img>
+                <img src={Check} alt='check'></img>
             </div>
             <h4 className='infoCheckStyleItem_text'>
                 {text}

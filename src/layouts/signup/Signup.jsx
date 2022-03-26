@@ -14,7 +14,13 @@ import {
     Select,
     OutlinedInput,
     MenuItem,
-    Button
+    Button,
+    Dialog,
+    DialogTitle,
+    DialogContent,
+    DialogContentText,
+    DialogActions,
+    TextField
 } from '@mui/material';
 
 const StyledInputElement = styled('input')(
@@ -96,14 +102,27 @@ const DESCRIPTION = [
 function Signup() {
     const [visible, setVisible] = useState(false);
     const [description, setDescription] = useState("");
+    const [open, setOpen] = useState(false);
+    const [gender, setGender] = useState("");
 
     const handleChange = (event) => {
         const {
             target: { value },
         } = event;
         setDescription(value);
+        if (value === "Care Seeker") setOpen(true);
     };
 
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const handleDialogueSelect = (event) => {
+        const {
+            target: { value },
+        } = event;
+        setGender(value);
+    }
     return (
         <div className='signup_layout'>
             <div className='signup_container'>
@@ -170,12 +189,71 @@ function Signup() {
                     </FormControl>
                     <div className='signup_container_right_footer'>
                         <h1 className='footer_text'>
-                            Already have an Account? 
+                            Already have an Account?
                         </h1>
                         <span className='footer_link'>Log In</span>
                     </div>
                 </div>
             </div>
+            {open &&
+                (
+                    <Dialog className="infoDialog" open={open} onClose={handleClose}>
+                        <DialogTitle>Extra Information</DialogTitle>
+                        <DialogContent>
+                            <DialogContentText>
+                                Please fill this extra Information for your future reference
+                            </DialogContentText>
+                        </DialogContent>
+                        <FormControl>
+                            <label htmlFor="description" className='form_label'>Gender</label>
+                            <Select
+                                value={gender}
+                                displayEmpty
+                                sx={{ margin: '0px 42px 12px 24px', width: '480px' }}
+                                onChange={handleDialogueSelect}
+                                renderValue={(selected) => {
+                                    if (gender === undefined || gender === "") {
+                                        return <em>Please Choose</em>;
+                                    }
+                                    return selected;
+                                }}
+                            >
+                                <MenuItem disabled value="">
+                                    <em>Please Choose</em>
+                                </MenuItem>
+                                <MenuItem
+                                    value={"Female"}
+                                >
+                                    Female
+                                </MenuItem>
+                                <MenuItem
+                                    value={"Male"}
+                                >
+                                    Male
+                                </MenuItem>
+                                <MenuItem
+                                    value={"Prefers not to select"}
+                                >
+                                    Prefers not to select
+                                </MenuItem>
+                            </Select>
+                            <label htmlFor="description" className='form_label'>Please Enter you Birth Date</label>
+                            <TextField
+                                autoFocus
+                                margin="dense"
+                                id="birthDate"
+                                label=""
+                                type="date"
+                                variant="outlined"
+                                sx={{ margin: '0px 42px 12px 24px', width: '480px' }}
+                            />
+                        </FormControl>
+                        <DialogActions>
+                            <Button onClick={handleClose}>Submit</Button>
+                        </DialogActions>
+                    </Dialog>
+                )
+            }
         </div>
     )
 }
