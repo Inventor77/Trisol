@@ -5,14 +5,14 @@
 }
 $font-stack: "Roboto", serif;
 
-.signup_layout {
+.login_layout {
 	@include center;
 	background: url("../../assets/images/pattern-background.jpg") center/100vw
 		auto no-repeat;
 	min-height: 100vh;
 	min-width: 100vw;
 
-	.signup_container {
+	.login_container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -22,7 +22,7 @@ $font-stack: "Roboto", serif;
 		box-shadow: 16px 24px 36px -15px rgba(238, 238, 238, 0.25);
 		border-radius: 16px;
 
-		.signup_container_left {
+		.login_container_left {
 			padding: 32px 45px 42px 16px;
 			width: 475px;
 			height: 564px;
@@ -30,11 +30,11 @@ $font-stack: "Roboto", serif;
 			border-radius: 16px 0px 0px 16px;
 		}
 
-		.signup_container_right {
+        .login_container_right {
 			padding: 32px 0px 42px 48px;
 			width: calc(100% - 475px);
 			height: 100%;
-			.signup_container_right_title {
+			.login_container_right_title {
 				margin-bottom: 8px;
 				.title_text {
 					font-family: $font-stack;
@@ -45,7 +45,7 @@ $font-stack: "Roboto", serif;
 					color: #ffffff;
 				}
 			}
-			.signup_container_right_para {
+			.login_container_right_para {
 				margin-bottom: 42px;
 				.para_text {
 					font-family: $font-stack;
@@ -75,7 +75,7 @@ $font-stack: "Roboto", serif;
 				}
 			}
 
-			.signup_container_right_footer {
+			.login_container_right_footer {
 				display: flex;
 				align-items: center;
 				justify-content: flex-start;
@@ -101,17 +101,5 @@ $font-stack: "Roboto", serif;
 				}
 			}
 		}
-	}
-}
-
-.infoDialog {
-	.form_label {
-		margin: 16px 0px 8px 24px;
-		font-family: $font-stack;
-		font-style: normal;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 21px;
-		color: #000;
-	}
+    }
 }
