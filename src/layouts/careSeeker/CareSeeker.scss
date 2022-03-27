@@ -5,7 +5,35 @@
 		margin: auto;
 		height: calc(100% - 78px);
 		width: 756px;
-		border-left: 0.1px dashed aqua;
-		border-right: 0.1px dashed aqua;
+		// border-left: 0.1px dashed aqua;
+		// border-right: 0.1px dashed aqua;
+		.action_section {
+			padding: 18px 0;
+			border-bottom: 1.5px solid #777777;
+			.action_form {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				.search_by_type {
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					width: 452px;
+					height: 42px;
+				}
+			}
+		}
 	}
+}
+
+.MuiList-root {
+	background: #000 !important;
+}
+.MuiMenuItem-root {
+	background: #000 !important;
+	color: #fff !important;
+}
+.Mui-selected {
+	background: #262626 !important;
 }
