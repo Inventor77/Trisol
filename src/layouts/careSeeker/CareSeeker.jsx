@@ -11,6 +11,7 @@ import {
     MenuItem,
 } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ReportCard from '../../components/ReportCard/ReportCard';
 
 
 const StyledSelect = styled(Select)(
@@ -139,7 +140,9 @@ function CareSeeker() {
                         </StyledFilterSelect>
                     </FormControl>
                 </div>
-                
+                <div className='card_container'>
+                    <ReportCard />
+                </div>
             </main>
         </section>
     )
