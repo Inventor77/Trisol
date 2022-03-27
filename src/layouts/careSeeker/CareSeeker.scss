@@ -5,8 +5,6 @@
 		margin: auto;
 		height: calc(100% - 78px);
 		width: 756px;
-		border-left: 0.1px dashed aqua;
-		border-right: 0.1px dashed aqua;
 		.action_section {
 			padding: 18px 0;
 			border-bottom: 1.5px solid #777777;
@@ -23,6 +21,14 @@
 					height: 42px;
 				}
 			}
+		}
+		.card_container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 28px;
+			padding-top: 24px;
 		}
 	}
 }

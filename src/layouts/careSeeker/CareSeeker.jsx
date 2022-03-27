@@ -30,7 +30,7 @@ const StyledSelect = styled(Select)(
 const StyledFilterSelect = styled(Select)(
     ({ theme }) => `
     font-family: "Roboto", serif;
-    width: 200px;
+    width: 248px;
     height: 42px;
     font-weight: 700;
     font-size: 18px;
@@ -44,7 +44,7 @@ const StyledFilterSelect = styled(Select)(
 const StyledSearch = styled('input')(
     ({ theme }) => `
     font-family: "Roboto", serif;
-    width: 320px;
+    width: 332px;
     height: 42px;
     padding: 0px 16px;
     font-weight: 500;
@@ -141,6 +141,11 @@ function CareSeeker() {
                     </FormControl>
                 </div>
                 <div className='card_container'>
+                    <ReportCard />
+                    <ReportCard />
+                    <ReportCard />
+                    <ReportCard />
+                    <ReportCard />
                     <ReportCard />
                 </div>
             </main>
