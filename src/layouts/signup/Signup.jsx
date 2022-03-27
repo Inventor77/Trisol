@@ -124,7 +124,7 @@ function Signup() {
         setGender(value);
     }
     return (
-        <div className='signup_layout'>
+        <section className='signup_layout'>
             <div className='signup_container'>
                 <div className='signup_container_left'>
                     <div className='signup_container_logo'>
@@ -254,7 +254,7 @@ function Signup() {
                     </Dialog>
                 )
             }
-        </div>
+        </section>
     )
 }
 

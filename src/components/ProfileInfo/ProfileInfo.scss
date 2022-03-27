@@ -1,0 +1,63 @@
+@mixin center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+$font-stack: "Roboto", serif;
+
+.profileInfo_container {
+	@include center;
+	height: 252px;
+	width: 100%;
+	.container_left {
+		@include center;
+		height: 100%;
+		width: 216px;
+		.color_ring {
+			@include center;
+			width: 164px;
+			height: 164px;
+			border: 3.5px solid #7fffd4;
+			border-radius: 80px;
+			.img_container {
+				background: url("../../assets/images/Lelouch.jpg") center/auto 144px
+					no-repeat;
+				height: 144px;
+				width: 144px;
+				border: 1px solid #777777;
+				border-radius: 72px;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			}
+		}
+	}
+	.container_right {
+		padding: 64px 0px 0px 32px;
+		height: 100%;
+		width: calc(100% - 216px);
+		.careSeeker_info {
+			.name {
+				font-family: $font-stack;
+				font-style: normal;
+				font-weight: 700;
+				font-size: 28px;
+				line-height: 39px;
+				color: #cccccc;
+			}
+			.other_info {
+				@include center;
+				justify-content: flex-start;
+				gap: 8px;
+				width: 100%;
+				.gender,
+				.age {
+					font-family: "Roboto";
+					font-style: normal;
+					font-weight: 600;
+					font-size: 16px;
+					line-height: 21px;
+					color: #aaaaaa;
+				}
+			}
+		}
+	}
+}

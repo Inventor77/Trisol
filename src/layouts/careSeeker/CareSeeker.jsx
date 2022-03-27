@@ -1,12 +1,17 @@
 import React from 'react'
-import Nav from '../../components/Navbar/Nav'
 import './CareSeeker.scss'
+import Nav from '../../components/Navbar/Nav'
+import ProfileInfo from '../../components/ProfileInfo/ProfileInfo'
+
 
 function CareSeeker() {
     return (
-        <div className='careSeeker_layout'>
+        <section className='careSeeker_layout'>
             <Nav />
-        </div>
+            <main className='layout_container'>
+                <ProfileInfo />
+            </main>
+        </section>
     )
 }
 

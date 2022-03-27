@@ -65,7 +65,7 @@ function Login() {
     const [visible, setVisible] = useState(false);
 
     return (
-        <div className='login_layout'>
+        <section className='login_layout'>
             <div className='login_container'>
                 <div className='login_container_left'>
                     <div className='login_container_logo'>
@@ -111,7 +111,7 @@ function Login() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

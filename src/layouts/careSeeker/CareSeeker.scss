@@ -1,4 +1,11 @@
 .careSeeker_layout {
 	background: #262626;
 	height: 100%;
+	.layout_container {
+		margin: auto;
+		height: calc(100% - 78px);
+		width: 756px;
+		border-left: 0.1px dashed aqua;
+		border-right: 0.1px dashed aqua;
+	}
 }
