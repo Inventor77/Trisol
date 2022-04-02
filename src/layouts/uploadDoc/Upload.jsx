@@ -8,26 +8,50 @@ import {
     OutlinedInput,
     MenuItem,
     // Button,
+    TextField,
 } from '@mui/material';
+import {
+    LocalizationProvider,
+    DatePicker,
+    TimePicker
+} from '@mui/lab';
+import AdapterDateFns from '@date-io/date-fns';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const StyledSelect = styled(Select)(
     ({ theme }) => `
     font-family: "Roboto", serif;
-    width: 630px;
+    width: 600px;
     height: 54px;
     font-weight: 700;
     font-size: 18px;
     color:  #555;
     background: #999;
     border: none;
-    border-radius: 3px 0 0 3px;
+    border-radius: 4px;
 `,
 );
+
+const StyledTextField = styled(TextField)(
+    ({ theme }) => `
+    font-family: "Roboto", serif;
+    width: 275px;
+    height: 54px;
+    font-weight: 700;
+    font-size: 18px;
+    color:  #555;
+    background: #999;
+    border: none;
+    border-radius: 4px;
+`,
+);
+
 
 function Upload() {
     const [name, setName] = useState("");
     const [type, setType] = useState("");
+    const [date, setDate] = useState();
+    const [time, setTime] = useState();
 
     const handleNameSelect = (event) => {
         const {
@@ -57,7 +81,8 @@ function Upload() {
                     <label htmlFor="name" className='form_label'>Name of Care Seeker</label>
                     <StyledSelect
                         id="name"
-                        className='typeSelect'
+                        displayEmpty
+                        className='nameSelect'
                         value={name}
                         onChange={handleNameSelect}
                         input={<OutlinedInput />}
@@ -66,7 +91,7 @@ function Upload() {
                         }
                         renderValue={(selected) => {
                             if (name === "" || name === undefined) {
-                                return <em>Select Care Seeker</em>;
+                                return <em><b>Select Care Seeker</b></em>;
                             }
                             return selected;
                         }}
@@ -84,6 +109,7 @@ function Upload() {
                     <label htmlFor="type" className='form_label'>Type of Document</label>
                     <StyledSelect
                         id="type"
+                        displayEmpty
                         className='typeSelect'
                         value={type}
                         onChange={handleTypeSelect}
@@ -93,7 +119,7 @@ function Upload() {
                         }
                         renderValue={(selected) => {
                             if (type === "" || type === undefined) {
-                                return <em>Select Document Type</em>;
+                                return <em><b>Select Document Type</b></em>;
                             }
                             return selected;
                         }}
@@ -108,6 +134,36 @@ function Upload() {
                             Report
                         </MenuItem>
                     </StyledSelect>
+                    <div className='date_time'>
+                        <div className='date'>
+                            <label htmlFor="date_input" className='form_label'>Date</label>
+                            <LocalizationProvider dateAdapter={AdapterDateFns}>
+                                <DatePicker
+                                    placeholder="Date"
+                                    value={date}
+                                    onChange={(newValue) => {
+                                        setDate(newValue);
+                                    }}
+                                    renderInput={(params) => <StyledTextField {...params} />}
+                                />
+                            </LocalizationProvider>
+                        </div>
+                        <div className='time'>
+                            <label htmlFor="time_input" className='form_label'>Time</label>
+                            <LocalizationProvider dateAdapter={AdapterDateFns}>
+                                <TimePicker
+                                    placeholder="Time"
+                                    value={time}
+                                    onChange={(newValue) => {
+                                        setTime(newValue);
+                                    }}
+                                    renderInput={(params) => <StyledTextField {...params} />}
+                                />
+                            </LocalizationProvider>
+                        </div>
+                    </div>
+                    <label htmlFor="upload" className='form_label'>Upload Report/Prescription</label>
+                    
                 </FormControl>
             </div>
         </div>

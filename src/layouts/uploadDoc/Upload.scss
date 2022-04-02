@@ -34,18 +34,29 @@ $font-stack: "Roboto", serif;
 				color: #aaaaaa;
 			}
 		}
-		.form_label {
-			margin: 16px 0px 8px 0px;
-			font-family: $font-stack;
-			font-style: normal;
-			font-weight: 600;
-			font-size: 20px;
-			line-height: 24px;
-			color: #ffffff;
+		.date_time {
+			@include center;
+			justify-content: space-between;
+			// margin-top: 16px;
+			.date,
+			.time {
+				@include center;
+				align-items: flex-start;
+				flex-direction: column;
+			}
 		}
 	}
 }
 
+.form_label {
+	margin: 16px 0px 6px 0px;
+	font-family: $font-stack;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	color: #ffffff;
+}
 
 .MuiList-root {
 	background: #888 !important;
