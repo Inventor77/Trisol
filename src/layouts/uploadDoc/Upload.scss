@@ -10,9 +10,9 @@ $font-stack: "Roboto", serif;
 	height: 100%;
 	width: 100%;
 	.upload_container {
-		margin: 54px auto;
+		margin: 42px auto;
 		width: 756px;
-		height: 798px;
+		height: 824px;
 		padding: 36px 84px 36px 42px;
 		background: #444444;
 		border-radius: 5px;
@@ -57,7 +57,7 @@ $font-stack: "Roboto", serif;
 }
 
 .MuiAutocomplete-input {
-	font-size: 0.9rem;
+	font-size: 1rem;
 	color: #344767;
 	opacity: 0.8;
 }
@@ -72,8 +72,8 @@ $font-stack: "Roboto", serif;
 	}
 	.MuiDropzoneArea-icon {
 		color: #ccc;
-		height: 42px;
-		width: 42px;
+		height: 54px;
+		width: 54px;
 	}
 }
 

@@ -7,7 +7,7 @@ import {
     Select,
     OutlinedInput,
     MenuItem,
-    // Button,
+    Button,
     TextField,
 } from '@mui/material';
 import {
@@ -48,6 +48,20 @@ const StyledTextField = styled(TextField)(
 `,
 );
 
+const StyledButton = styled(Button)(() => `
+    height: 64px;
+    width: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 20px;
+    background: #888888;
+    color: #fff;
+    border-radius: 4px;
+    text-align: left;
+    margin-top: 42px;
+`)
 
 function Upload() {
     const [name, setName] = useState("");
@@ -166,7 +180,7 @@ function Upload() {
                     </div>
                     <label htmlFor="upload" className='form_label'>Upload Report/Prescription</label>
                     <DropzoneArea id="apk" />
-
+                    <StyledButton variant="contained">Sign up</StyledButton>
                 </FormControl>
             </div>
         </div>
