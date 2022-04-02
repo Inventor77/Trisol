@@ -1,10 +1,29 @@
+@mixin center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+$font-stack: "Roboto", serif;
+
 .careSeeker_layout {
 	background: #262626;
 	height: 100%;
 	width: 100%;
+    box-sizing: border-box;
 	.layout_container {
 		margin: auto;
 		height: calc(100% - 78px);
 		width: 756px;
+		.container_header {
+            margin: 24px 0;
+			.header_text {
+				font-family: $font-stack;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 28px;
+				line-height: 34px;
+				color: #ffffff;
+			}
+		}
 	}
 }
