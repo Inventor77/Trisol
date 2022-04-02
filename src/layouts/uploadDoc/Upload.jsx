@@ -17,11 +17,13 @@ import {
 } from '@mui/lab';
 import AdapterDateFns from '@date-io/date-fns';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { DropzoneArea } from 'material-ui-dropzone';
+
 
 const StyledSelect = styled(Select)(
     ({ theme }) => `
     font-family: "Roboto", serif;
-    width: 600px;
+    width: 636px;
     height: 54px;
     font-weight: 700;
     font-size: 18px;
@@ -35,7 +37,7 @@ const StyledSelect = styled(Select)(
 const StyledTextField = styled(TextField)(
     ({ theme }) => `
     font-family: "Roboto", serif;
-    width: 275px;
+    width: 300px;
     height: 54px;
     font-weight: 700;
     font-size: 18px;
@@ -163,7 +165,8 @@ function Upload() {
                         </div>
                     </div>
                     <label htmlFor="upload" className='form_label'>Upload Report/Prescription</label>
-                    
+                    <DropzoneArea id="apk" />
+
                 </FormControl>
             </div>
         </div>

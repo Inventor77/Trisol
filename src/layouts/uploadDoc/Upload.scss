@@ -48,6 +48,35 @@ $font-stack: "Roboto", serif;
 	}
 }
 
+.MuiDropzoneArea-root {
+	background: #444444 !important;
+	border: dashed #cccccc !important;
+}
+.MuiInputBase-root {
+	width: 100%;
+}
+
+.MuiAutocomplete-input {
+	font-size: 0.9rem;
+	color: #344767;
+	opacity: 0.8;
+}
+.MuiDropzoneArea-textContainer {
+	p {
+		font-family: $font-stack;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		color: #cccccc;
+	}
+	.MuiDropzoneArea-icon {
+		color: #ccc;
+		height: 42px;
+		width: 42px;
+	}
+}
+
 .form_label {
 	margin: 16px 0px 6px 0px;
 	font-family: $font-stack;
