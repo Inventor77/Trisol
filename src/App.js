@@ -1,10 +1,10 @@
 import "./App.scss";
-import UploadPage from "./pages/uploadPage";
+import CareSeekerListPage from "./pages/careSeekerListPage";
 
 function App() {
 	return (
 		<div className="App">
-			<UploadPage />
+			<CareSeekerListPage />
 		</div>
 	);
 }
